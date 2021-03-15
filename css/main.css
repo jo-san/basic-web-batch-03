@@ -1,0 +1,288 @@
+* {
+  color: gray;
+}
+
+h1 {
+  color: red;
+}
+
+.section-wrapper h1 {
+  color: green;
+}
+
+.section-wrapper > h1 {
+  color: blue;
+}
+
+.section-wrapper > div > h1,
+.title {
+  color: pink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.box-modal {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: bisque;
+  width: 400px;
+  position: relative;
+}
+
+.abs {
+  position: absolute;
+  width: 96px;
+  height: 34px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50px;
+  margin-top: -17px;
+  margin-left: -48px;
+  padding: 6px 12px;
+  top: 50%;
+  left: 50%;
+}
+
+.fix {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  background-color: green;
+  color: white;
+  padding: 12px 24px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  display: inline-block;
+  width: 100px;
+  padding: 12px 24px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* FLEX */
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-wrapper {
+  height: 300px;
+  width: 500px;
+  background-color: #ccc;
+  margin: 50px auto;
+}
+
+.flex-item {
+  height: 50px;
+  width: 50px;
+  background-color: cornflowerblue;
+  color: white;
+  margin-right: 4px;
+  border-radius: 10px;
+}
+
+.country-flag {
+  background-image: url("https://cdn-media-1.freecodecamp.org/images/1*pc6EbbKjoFzSbVCMiA8OOQ.png");
+  background-repeat: no-repeat;
+  background-size: 800px;
+}
+
+.country-flag.india {
+  background-position: -200px -308px;
+}
+
+.flex-wrapper .flex-item:first-child {
+  background-color: burlywood;
+}
+
+.flex-wrapper .flex-item:first-child:hover {
+  background-color: blueviolet;
+}
+
+.flex-item:hover {
+  background-color: blueviolet;
+}
+
+.flex-wrapper :not(.flex-item:first-child) {
+  background-color: gray;
+}
+
+.flex-wrapper .flex-item:nth-child(2) {
+  background-color: black;
+}
+
+.flex-wrapper .flex-item:nth-last-child(2n) {
+  background-color: brown;
+}
+
+/* Amazon product grid */
+.amazon-product-grid {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  background-color: #eee;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 24px;
+}
+
+.products-grid {
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.product-card img {
+  width: auto;
+  height: 150px;
+}
+
+.single-item .product-card {
+  width: 100%;
+}
+
+.single-item .product-card img {
+  height: 340px;
+}
+
+.order-1 {
+  order: 1;
+}
+.order-2 {
+  order: 2;
+}
+.order-3 {
+  order: 3;
+}
+.order-4 {
+  order: 4;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-grow-2 {
+  flex-grow: 2;
+}
+
+.flex-grow-3 {
+  flex-grow: 3;
+}
+
+table ::selection {
+  background-color: black;
+  color: white;
+}
+
+p::before{
+  content: '***';
+  font-size: large;
+}
+
+p::after{
+  content: '>';
+  font-size: large;
+  margin-left: 30px;
+}
+
+/* For Desktop */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Desktop first approach */
+body {
+  font-size: 24px;
+}
+/* 0px-992px */
+@media only screen and (max-width: 992px) {
+  body {
+    font-size: 22px;
+  }
+}
+/* 0-768px */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+}
+/* 0-640px */
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 18px;
+  }
+}
+/* 0-480px */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Mobile first approach */
+body {
+  font-size: 14px;
+  color:rgba(0, 0, 0, 0.5);
+}
+.flex-direction {
+  flex-direction: column;
+}
+/* >640 */
+@media only screen and (min-width: 640px) {
+  body {
+    font-size: 18px;
+  }
+}
+/* >767px */
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 20px;
+  }
+  .flex-direction {
+    flex-direction: row;
+  }
+}
+/* >991px */
+@media only screen and (min-width: 991px) {
+  body {
+    font-size: 22px;
+  }
+}
+/* >1200px */
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 24px;
+  }
+}
