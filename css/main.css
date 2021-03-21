@@ -99,6 +99,9 @@ h1 {
   color: white;
   margin-right: 4px;
   border-radius: 10px;
+
+  transition: all 700ms cubic-bezier(.68,-0.55,.27,1.55) 0.4s;
+  cursor: pointer;
 }
 
 .country-flag {
@@ -117,6 +120,15 @@ h1 {
 
 .flex-wrapper .flex-item:first-child:hover {
   background-color: blueviolet;
+  width: 120px;
+  /* margin-left: 100px; */
+  /* transform: scale(1.2); */
+
+  animation-name: scallUp;
+  animation-duration: 700ms;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
 }
 
 .flex-item:hover {
@@ -285,4 +297,36 @@ body {
   body {
     font-size: 24px;
   }
+}
+
+@keyframes scallUp {
+  0% {
+    background-color: red;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  25% {
+    background-color: yellow;
+    margin-left: 200px;
+    margin-top: 0;
+  }
+  50% {
+    background-color: green;
+    margin-left: 200px;
+    margin-top: 200px;
+  }
+  75% {
+    background-color: green;
+    margin-left: 0;
+    margin-top: 200px;
+  }
+  100% {
+    background-color: blue;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+.text-example {
+  text-transform: capitalize;
 }
